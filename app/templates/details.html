@@ -1,0 +1,49 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Details</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+
+</head>
+
+<body>
+
+  <form action="{{ url_for('handle_data') }}" method="POST">
+
+    <h1>Details</h1>
+
+    <fieldset>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="user_name">
+
+      <label for="gender">Gender:</label>
+      <input type="radio" name="gender" id="Male" value="Male"> Male </input><br>
+      <input type="radio" name="gender" id="Female" value="Female"> Female </input><br>
+      <br />
+
+      <label for="number">Phone Number:</label>
+      <input type="number" id="phone" name="number"><br />
+
+
+      <label for="age">Age:</label>
+      <select id="age" name="age">
+        <optgroup label="">
+          <option value="" disabled selected>Select your age</option>
+          <option>18 to 24</option>
+          <option>25 to 34</option>
+          <option>35 to 44</option>
+          <option>45 to 54</option>
+          <option>55 to 64</option>
+        </optgroup>
+      </select>
+
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address"></textarea>
+    </fieldset>
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+
+</html>
